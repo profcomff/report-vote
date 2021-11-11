@@ -1,7 +1,9 @@
 <template>
   <div class="container-fluid">
     <h2>Готовы проголосовать?</h2>
-    <button class="btn btn-primary">Вход</button>
+    <login-dialog>
+      <button class="btn btn-primary">Вход</button>
+    </login-dialog>
     <p class="text-muted">
       <small>
         Еще не зарегистрированы?
@@ -14,7 +16,13 @@
 </template>
 
 <script>
-export default {};
+import LoginDialog from "@/components/LoginDialog.vue";
+
+export default {
+  components: {
+    LoginDialog,
+  },
+};
 </script>
 
 <style scoped>
