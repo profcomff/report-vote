@@ -1,10 +1,9 @@
 <template>
   <div>
-    <p>About</p>
+    <p>Fail</p>
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>About</p>
+    <p>Question {{i}}</p>
   </div>
 </template>
 
