@@ -7,6 +7,7 @@
         class="form-control"
         id="emailInput"
         placeholder="ivanov.ii@physics.msu.ru"
+        v-model="email"
         required
       />
     </div>
@@ -17,6 +18,7 @@
         class="form-control"
         id="passwordInput"
         placeholder="Пароль"
+        v-model="password"
         required
       />
       <p class="text-muted">
@@ -30,7 +32,12 @@
       </p>
     </div>
     <div class="form-group form-control-box">
-      <button class="btn btn-primary">Вход</button>
+      <button
+        class="btn btn-primary"
+        @click="this.$emit('login_clicked', this.email, this.password)"
+      >
+        Вход
+      </button>
     </div>
   </form>
 </template>
@@ -38,6 +45,12 @@
 <script>
 export default {
   name: "login-dialog",
+  data() {
+    return {
+      email: localStorage.email,
+      password: "",
+    };
+  },
 };
 </script>
 

@@ -20,8 +20,8 @@
         <li>Разное.</li>
       </ol>
     </div>
-    <div class='controls'>
-      <button class="btn btn-primary">Начать!</button>
+    <div class="controls">
+      <router-link to="/question" class="btn btn-primary">Начать!</router-link>
     </div>
   </div>
 </template>

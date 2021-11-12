@@ -12,7 +12,7 @@
         Не помогло?
       </a>
     </p>
-    <button class="btn btn-primary">Вернуться</button>
+    <router-link to="/" class="btn btn-primary">Вернуться</router-link>
   </div>
 </template>
 
