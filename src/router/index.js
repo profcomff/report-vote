@@ -22,7 +22,7 @@ const routes = [
     component: About
   },
   {
-    path: '/question/:index',
+    path: '/question',
     name: 'Question',
     component: Question
   },
