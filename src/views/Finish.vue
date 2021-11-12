@@ -1,10 +1,15 @@
 <template>
   <div>
-    <p>Finish</p>
+    <h2>Спасибо за участие в 62-й отчетно-выборной конференции!</h2>
+    <p>
+      Голосование закончится 23 ноября в 22:00. После этого времени мы
+      опубликуем резолюцию на этом сайте и обязательно пришлем ссылку на нее по
+      почте.
+    </p>
+    <router-link to="/" class="btn btn-light">Готово</router-link>
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
