@@ -1,10 +1,20 @@
 <template>
   <div>
-    <h2>Вопрос {{current_question}} из {{total_questions}}</h2>
-    <p>{{text}}</p>
+    <h2>Вопрос {{ current_question }} из {{ total_questions }}</h2>
+    <p>{{ text }}</p>
     <div class="form-group form-control-box">
-      <button class="btn btn-success" @click="yes_clicked">Да</button>
-      <button class="btn btn-danger" @click="no_clicked">Нет</button>
+      <button
+        class="btn btn-success"
+        @click="this.$emit('ans_clicked', this.id, 'yes')"
+      >
+        Да
+      </button>
+      <button
+        class="btn btn-danger"
+        @click="this.$emit('ans_clicked', this.id, 'no')"
+      >
+        Нет
+      </button>
     </div>
   </div>
 </template>
@@ -13,17 +23,7 @@
 export default {
   name: "question-dialog",
   props: ["current_question", "total_questions", "id", "text"],
-  methods: {
-    yes_clicked() {
-      console.log(this.id, 'yes');
-      this.$emit('yes_clicked')
-    },
-    no_clicked() {
-      console.log(this.id, 'no');
-      this.$emit('no_clicked')
-    },
-  }
-}
+};
 </script>
 
 <style scoped>
