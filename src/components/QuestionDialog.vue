@@ -1,19 +1,26 @@
 <template>
   <div>
-    <h2>Вопрос {{ current_question }} из {{ total_questions }}</h2>
-    <p>{{ text }}</p>
+    <h2>Голосование {{ current_question }} из {{ total_questions }}</h2>
+    <div v-html="text"></div>
     <div class="form-group form-control-box">
       <button
         class="btn btn-success"
         @click="this.$emit('ans_clicked', this.id, 'yes')"
       >
-        Да
+        За
       </button>
       <button
         class="btn btn-danger"
         @click="this.$emit('ans_clicked', this.id, 'no')"
       >
-        Нет
+        Против
+      </button>
+      <br/>
+      <button
+        class="btn"
+        @click="this.$emit('ans_clicked', this.id, 'skip')"
+      >
+        Воздержаться
       </button>
     </div>
   </div>
@@ -29,6 +36,7 @@ export default {
 <style scoped>
 .form-control-box > button {
   margin: 20px;
+  margin-bottom: 0px;
   width: 40%;
 }
 </style>
