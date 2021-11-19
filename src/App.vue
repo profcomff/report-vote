@@ -9,6 +9,10 @@ button.btn-primary {
 
 div.container-fluid {
   margin: 20px auto;
+  text-align: left;
+}
+
+div.controls {
   text-align: center;
 }
 </style>

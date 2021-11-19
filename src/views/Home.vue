@@ -1,15 +1,17 @@
 <template>
   <div class="container-fluid">
     <h2>Готовы проголосовать?</h2>
-    <login-dialog @login_clicked="login_clicked" />
-    <p class="text-muted">
-      <small>
-        Еще не зарегистрированы?
-        <a href="https://report.profcomff.com" target="”_blank”">
-          Перейти к регистрации
-        </a>
-      </small>
-    </p>
+    <div class="controls">
+      <login-dialog @login_clicked="login_clicked" />
+      <p class="text-muted">
+        <small>
+          Еще не зарегистрированы?
+          <a href="https://report.profcomff.com" target="”_blank”">
+            Перейти к регистрации
+          </a>
+        </small>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -53,7 +55,4 @@ export default {
 </script>
 
 <style scoped>
-div.container-fluid > * {
-  margin: 20px 0;
-}
 </style>

@@ -4,6 +4,8 @@
     <p>
       Что-то пошло не так при входе. Возможно вы неверно ввели адрес электронной
       почты или пароль. Попробуйте еще раз.
+    </p>
+    <p>
       <a
         href="https://report.profcomff.com/faq"
         target="_blank"
@@ -12,11 +14,12 @@
         Не помогло?
       </a>
     </p>
-    <router-link to="/" class="btn btn-primary">Вернуться</router-link>
+    <div class="controls">
+      <router-link to="/" class="btn btn-primary">Вернуться</router-link>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>

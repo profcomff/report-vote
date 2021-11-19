@@ -2,7 +2,7 @@
   <div>
     <h2>Голосование {{ current_question }} из {{ total_questions }}</h2>
     <div v-html="text"></div>
-    <div class="form-group form-control-box">
+    <div class="form-group form-control-box controls">
       <button
         class="btn btn-success"
         @click="this.$emit('ans_clicked', this.id, 'yes')"
@@ -15,11 +15,8 @@
       >
         Против
       </button>
-      <br/>
-      <button
-        class="btn"
-        @click="this.$emit('ans_clicked', this.id, 'skip')"
-      >
+      <br />
+      <button class="btn" @click="this.$emit('ans_clicked', this.id, 'skip')">
         Воздержаться
       </button>
     </div>
